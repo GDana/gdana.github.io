@@ -12,7 +12,6 @@
       $contents = $('.scroll'),
       $doc      = $('html, body');
   $(function () {
-
       $menu.on('click','a', function(e){
           var $target = $(this).parent(),
               idx     = $target.index(),
@@ -31,6 +30,10 @@
       var inner = $('.inner').offset().top
       var nav = $('nav')
 
+      /* 
+        스크롤할 시 좌표가 .inner 좌표에 왔을 때 nav태그에 'position:fixed'로 변경
+          및 .inner 좌표보다 스크롤 좌표가 작을 때 'position:absolute'로 변경
+      */
       if(inner <= scltop){
         nav.addClass('fixed')
       }else if(inner >= scltop){
