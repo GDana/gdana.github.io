@@ -7,14 +7,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 
-a{
-  text-decoration: none;
-  color: #727272;
-}
-a:visited{
-  color: #727272;
-}
-
 body{
   font-family: 'Nanum Gothic Coding', monospace;
   letter-spacing: -1px;
@@ -27,7 +19,6 @@ body{
 }
 
 header > h1{
-  /* font-family: 'Gothic A1', sans-serif; */
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-size: 40px;
@@ -47,11 +38,11 @@ header > h2{
 
 header > p{
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 70px;
   font-size: 14px;
   line-height: 19px;
   letter-spacing: -1px;
-  color: #B1B0B0;
+  color: #727272;
 }
 
 header .line_portfolio{
@@ -180,7 +171,7 @@ footer > ul li{
 
 footer > p{
   text-align: center;
-  padding-top: 30px;
+  padding-top: 10px;
   color: #B1B0B0;
 }
 

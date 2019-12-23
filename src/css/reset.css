@@ -49,3 +49,10 @@ body{
 	color: #727272;
 }
 
+a{
+  text-decoration: none;
+  color: #727272;
+}
+a:visited{
+  color: #727272;
+}
