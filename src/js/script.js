@@ -27,16 +27,19 @@
 
   $(window).scroll(function(){
       var scltop = $(window).scrollTop();
-      var inner = $('.inner').offset().top
+      var inner = $('.box-conts').offset().top
       var nav = $('nav')
 
       /* 
-        스크롤할 시 좌표가 .inner 좌표에 왔을 때 nav태그에 'position:fixed'로 변경
-          및 .inner 좌표보다 스크롤 좌표가 작을 때 'position:absolute'로 변경
+        스크롤할 시 좌표가 box-conts 좌표에 왔을 때 nav태그에 'position:fixed'로 변경
+          및 box-conts 좌표보다 스크롤 좌표가 작을 때 'position:absolute'로 변경
       */
+    //  console.log(scltop)
+    //  console.log(inner)
       if(inner <= scltop){
         nav.addClass('fixed')
-      }else if(inner >= scltop){
+      }
+      else if(inner >= scltop){
         nav.removeClass('fixed')
       }
 

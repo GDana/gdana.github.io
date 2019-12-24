@@ -9,22 +9,26 @@
 
 body{
   font-family: 'Nanum Gothic Coding', monospace;
-  letter-spacing: -1px;
   line-height: 24px;
+  letter-spacing: -1px;
+  color: #727272;
 }
 
-.inner{
+a{
+  color: rgba(114,114,114,0.8);
+}
+
+a:visited{
+  color: rgba(114,114,114,0.8);
+}
+
+section{
   position: relative;
   display: grid;
 }
 
-header > h1{
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  font-size: 40px;
-  letter-spacing: 0;
-  padding: 20px 0 10px;
-  text-align: center;
+header{
+  padding: 150px 0 100px 0;
 }
 
 header > h2{
@@ -32,18 +36,16 @@ header > h2{
   font-weight: bold;
   font-size: 28px;
   letter-spacing: 0;
-  padding: 135px 0 14px;
+  padding-bottom:   14px;
   text-align: center;
 }
 
 header > p{
-  text-align: center;
-  padding-bottom: 70px;
   font-size: 14px;
-  line-height: 19px;
-  letter-spacing: -1px;
-  color: #727272;
+  text-align: center;
+  line-height: 20px;
 }
+
 
 header .line_portfolio{
   width: 70px;
@@ -53,7 +55,7 @@ header .line_portfolio{
   padding: 8px 0 10px;
 }
 
-.main{
+.box-conts{
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(2, 600px);
@@ -63,21 +65,20 @@ header .line_portfolio{
   /* border: 1px solid black; */
 }
 
-.main h3{
+.box-conts h3{
   font-size: 25px;
   font-weight: bold;
   padding-bottom: 12px;
 }
 
-
 .info_left{
-  padding: 55px 0 0 80px;
+  padding: 55px 80px 0 0;
+  text-align: right;
   position: relative;
 }
 
 .info_right{
-  padding: 55px 80px 0 0;
-  text-align: right;
+  padding: 55px 0 0 80px;
   position: relative;
 }
 
@@ -119,6 +120,7 @@ header .line_portfolio{
 
 .bold{
   font-weight: bold;
+  padding-top: 17px;
 }
 .none_letter{
   letter-spacing: 0;
@@ -126,7 +128,7 @@ header .line_portfolio{
 
 nav{
   position: absolute;
-  top: 0;
+  top: 2rem;
   right: 100px;
   width: 200px;
   color: #727272;
@@ -134,7 +136,7 @@ nav{
   /* border: 1px solid black; */
 }
 
-nav > div{
+nav .btn-main{
   width: 200px;
   height: 66px;
   margin-top: 25px;
@@ -177,6 +179,31 @@ footer > p{
 
 .fixed{
   position: fixed;
-  top: 0;
+  top: 2rem;
 }
 
+@media (max-width: 1599px){
+  nav, .item p, .item ul li{
+    font-size: 0.875em;
+    line-height: 20px
+  }
+  .box-conts{
+    grid-template-columns: repeat(2, 500px);
+    grid-template-rows: 450px;
+  }
+
+  .box-conts h3{
+    font-size: 1.438em;
+    padding-bottom: 10px;
+  }
+
+  .item ul{
+    padding-top: 35px;
+  }
+
+  .item img{
+    width: 500px;
+    height: 450px;
+  }
+  
+}
