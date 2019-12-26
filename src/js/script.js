@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  // $('.slider').bxSlider();
 
   // 레이어 팝업
   function openPopup(){
@@ -10,7 +9,7 @@ $(document).ready(function(){
 
    var popupItem;
    
-   for(let i = 0; i < 4; i++){
+   for(let i = 0; i < 5; i++){
       if(targetClass === keyword[i]){
         console.log(targetClass)
         console.log(popup[i])
@@ -23,10 +22,11 @@ $(document).ready(function(){
 
   function closePopup(){
     var target = $(event.target);
-    // console.log(target.children()[0])
-    for(let i = 0; i < 4; i++){
-      if($(target.children()[i]).css("display") == "block"){
-        $(target.children()[i]).hide()
+
+    for(let i = 0; i < 5; i++){
+
+      if($(target.parent().children()[i]).css("display") == "block"){
+        $(target.parent().children()[i]).hide()
       }
     }
   }
@@ -34,6 +34,7 @@ $(document).ready(function(){
   $('.img').on('click', function(){
     if($(".area-popup").css("display") == "none"){
       $(".area-popup").show()
+      $(".closeBtn").show()
       openPopup()
     }
   })
