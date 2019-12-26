@@ -1,71 +1,47 @@
-// $("nav ul li").click(function() {
-//   var scrollPosition = $($(this).attr("data-target")).offset().top;
+$(document).ready(function(){
+ 
+  function itemSearch(){
+    var target = $(event.target);
+    var targetClass = target[0].classList[target[0].classList.length-1]
+    var keyword = ['item01', 'item02', 'item03', 'item04']
+    var popup = ['.popup-item01', '.popup-item02', '.popup-item03', '.popup-item04']
 
-//   $("body").animate({
-//         scrollTop: scrollPosition
-//   }, 500);
-// })
+   var popupItem;
+   
+   for(let i = 0; i < 4; i++){
+      if(targetClass === keyword[i]){
+        console.log(targetClass)
+        console.log(popup[i])
 
-
-(function (global, $) {
-  var $menu     = $('nav ul li.m'),
-      $contents = $('.scroll'),
-      $doc      = $('html, body');
-  $(function () {
-      $menu.on('click','a', function(e){
-          var $target = $(this).parent(),
-              idx     = $target.index(),
-              section = $contents.eq(idx),
-              offsetTop = section.offset().top;
-          $doc.stop()
-                  .animate({
-                      scrollTop :offsetTop
-                  }, 800);
-          return false;
-      });
-  });
-
-  $(window).scroll(function(){
-      var scltop = $(window).scrollTop();
-      var inner = $('.box-conts').offset().top
-      var nav = $('nav')
-
-      /* 
-        스크롤할 시 좌표가 box-conts 좌표에 왔을 때 nav태그에 'position:fixed'로 변경
-          및 box-conts 좌표보다 스크롤 좌표가 작을 때 'position:absolute'로 변경
-      */
-    //  console.log(scltop)
-    //  console.log(inner)
-      if(inner <= scltop){
-        nav.addClass('fixed')
+        popupItem = popup[i];
+        $(popupItem).show()
       }
-      else if(inner >= scltop){
-        nav.removeClass('fixed')
+    }
+  }
+
+  function itemSearchOut(){
+    var target = $(event.target);
+    // console.log(target.children()[0])
+    for(let i = 0; i < 4; i++){
+      if($(target.children()[i]).css("display") == "block"){
+        $(target.children()[i]).hide()
       }
+    }
+  }
 
-      $.each($contents, function(idx, item){
-          var $target   = $contents.eq(idx),
-              i         = $target.index(),
-              targetTop = $target.offset().top;
+  $('.img').on('click', function(){
+    if($(".area-popup").css("display") == "none"){
+      $(".area-popup").show()
+      itemSearch()
+    }
+  })
 
-          if (targetTop <= scltop) {
-              $menu.removeClass('on');
-              $menu.eq(idx).addClass('on');
-          }
-          if (!(200 <= scltop)) {
-              $menu.removeClass('on');
-          }
-      })
+  $('.area-popup').on('click', function(){
+    if($(".area-popup").css("display") == "block"){
+      $(".area-popup").hide()
+      itemSearchOut()
+    }
+  })
 
-  });
+});
 
-  // var btnTop = $('.btn-top');
-  // btnTop.on('click','a', function(e){
-  //     e.preventDefault();
-  //     $doc.stop()
-  //             .animate({
-  //                 scrollTop : 0
-  //             },800)
-  // });
-
-}(window, window.jQuery));
