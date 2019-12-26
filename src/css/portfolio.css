@@ -22,6 +22,10 @@ a:visited{
   color: rgba(114,114,114,0.8);
 }
 
+a:hover{
+
+}
+
 section{
   position: relative;
   width: 1200px;
@@ -103,7 +107,26 @@ header .line_portfolio{
   top: 50%;
   left: 50%;
   margin: -250px 0 0 -400px;
+
   border: 1px solid black;
+}
+
+.closeBtn{
+  /* color: rgba(255,255,255,0.93);
+  font-size: 53px;
+  border: 1.2px solid rgba(255,255,255,0.9);
+  border-radius: 50px;
+  text-align: center;
+  padding: 24px 13px 0;
+  */
+  position: fixed;
+  top: 5rem;
+  right: 11rem;
+  width: 60px;
+  height: 60px;
+  background: url('../images/close.png');
+  background-size: cover;
+  cursor: pointer; 
 }
 
 .info_left{
@@ -122,28 +145,28 @@ header .line_portfolio{
 }
 
 .item .line_item01{
-  width: 284px;
+  width: 264px;
   border-top: 1.2px solid rgba(0,0,0,0.15);
   position: absolute;
   left: 0px;
 }
 
 .item .line_item02{
-  width: 210px;
+  width: 241px;
   border-top: 1.2px solid rgba(0,0,0,0.15);
   position: absolute;
   right: 0px;
 }
 
 .item .line_item03{
-  width: 270px;
+  width: 265px;
   border-top: 1.2px solid rgba(0,0,0,0.15);
   position: absolute;
   left: 0px;
 }
 
 .item .line_item04{
-  width: 270px;
+  width: 241px;
   border-top: 1.2px solid rgba(0,0,0,0.15);
   position: absolute;
   right: 0px;
@@ -240,7 +263,7 @@ footer > p{
 
 @media (max-width: 1679px){
   nav, .item p, .item ul li, header > p{
-    font-size: 0.875em;
+    font-size: 0.93em;
     line-height: 20px;
   }
 
@@ -273,10 +296,19 @@ footer > p{
   }
 
   .item .line_item01{
-    width: 268px;
-    border-top: 1.2px solid rgba(0,0,0,0.15);
-    position: absolute;
-    left: 0px;
+    width: 248px;
+  }
+  
+  .item .line_item02{
+    width: 227px;
+  }
+  
+  .item .line_item03{
+    width: 250px;
+  }
+  
+  .item .line_item04{
+    width: 226px;
   }
   
 }

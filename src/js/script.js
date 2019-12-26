@@ -1,6 +1,8 @@
 $(document).ready(function(){
- 
-  function itemSearch(){
+  // $('.slider').bxSlider();
+
+  // 레이어 팝업
+  function openPopup(){
     var target = $(event.target);
     var targetClass = target[0].classList[target[0].classList.length-1]
     var keyword = ['item01', 'item02', 'item03', 'item04']
@@ -19,7 +21,7 @@ $(document).ready(function(){
     }
   }
 
-  function itemSearchOut(){
+  function closePopup(){
     var target = $(event.target);
     // console.log(target.children()[0])
     for(let i = 0; i < 4; i++){
@@ -32,14 +34,14 @@ $(document).ready(function(){
   $('.img').on('click', function(){
     if($(".area-popup").css("display") == "none"){
       $(".area-popup").show()
-      itemSearch()
+      openPopup()
     }
   })
 
-  $('.area-popup').on('click', function(){
+  $('.closeBtn').on('click', function(){
     if($(".area-popup").css("display") == "block"){
       $(".area-popup").hide()
-      itemSearchOut()
+      closePopup()
     }
   })
 

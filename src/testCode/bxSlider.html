@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>bxSlider</title>
+  
+  <!-- 슬라이드 bxSlider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  
+  <script>
+    $(document).ready(function(){
+        $('.slider').bxSlider();
+
+        // function clickBtn(){
+          console.log('click')
+          $('.click').on('click', function(){
+            if($(".box").css("display") == "none"){
+              $('.box').show()
+            }
+          })
+        // }
+
+        // clickBtn()
+    });
+  </script>
+
+  <style>
+    .bx-wrapper .bx-pager.bx-default-pager a.active{
+      background-color: rgba(242, 205, 135);
+    }
+    .bx-wrapper .bx-pager.bx-default-pager a{
+      background-color: rgba(114,114,114,0.8);
+    }
+  </style>
+</head>
+<body>
+  <div class="box" style="display:none;">
+    <div class="slider">
+      <div><img src="../images/cat(11).jpg" alt=""></div>
+      <div><img src="../images/cat(16).jpg" alt=""></div>
+      <div><img src="../images/cat(27).jpg" alt=""></div>
+      <div><img src="../images/cat(28).jpg" alt=""></div>
+      <div><img src="../images/cat(3).jpg" alt=""></div>
+    </div>
+  </div>
+
+  <button class="click">button</button>
+  <!-- <button onclick="clickBtn()">button</button> --> 
+
+  <div class="slider">
+    <div><img src="../images/cat(11).jpg" alt=""></div>
+    <div><img src="../images/cat(16).jpg" alt=""></div>
+    <div><img src="../images/cat(27).jpg" alt=""></div>
+    <div><img src="../images/cat(28).jpg" alt=""></div>
+    <div><img src="../images/cat(3).jpg" alt=""></div>
+  </div>
+
+  
+</body>
+</html>
