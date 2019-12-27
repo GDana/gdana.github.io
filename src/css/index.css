@@ -23,6 +23,8 @@ a:visited{
 .wrapper{
   width: 350px;
   height: 560px;
+  min-width: 350px;
+  min-height: 560px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -143,5 +145,13 @@ section ul li:first-child::before{
 
 
 
+/* 
 
-
+.wrapper{
+  width: 350px;
+  height: 560px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -51%);
+} */
