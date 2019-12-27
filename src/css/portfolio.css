@@ -84,7 +84,7 @@ header .line_portfolio{
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.45);
+  background-color: rgba(0,0,0,0.5);
 }
 
 /* .popup{
@@ -124,7 +124,7 @@ header .line_portfolio{
   right: 11rem;
   width: 60px;
   height: 60px;
-  background: url('../images/close.png');
+  background: url('../images/close_white.png');
   background-size: cover;
   cursor: pointer; 
 }
