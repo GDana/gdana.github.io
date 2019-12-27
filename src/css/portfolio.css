@@ -261,6 +261,11 @@ footer > p{
   color: #B1B0B0;
 }
 
+/* 영문 폰트 전용 class */
+.font-en{
+  font-family: 'Montserrat', sans-serif;
+}
+
 @media (max-width: 1679px){
   nav, .item p, .item ul li, header > p{
     font-size: 0.93em;
