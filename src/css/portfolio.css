@@ -22,10 +22,6 @@ a:visited{
   color: rgba(114,114,114,0.8);
 }
 
-a:hover{
-
-}
-
 section{
   position: relative;
   width: 1200px;
@@ -65,7 +61,6 @@ header .line_portfolio{
   grid-template-columns: repeat(2, 600px);
   grid-template-rows: 550px;
   gap: 70px 0;
-  /* border: 1px solid black; */
 }
 
 .contents h3{
@@ -87,41 +82,24 @@ header .line_portfolio{
   background-color: rgba(0,0,0,0.5);
 }
 
-/* .popup{
-  width: 800px;
-  height: 500px;
-  background-color: white;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin: -250px 0 0 -400px;
-  border: 1px solid black;
-} */
-
 .popup-item01, .popup-item02, .popup-item03, .popup-item04{
   display: none;
-  width: 800px;
-  height: 500px;
-  background-color: white;
   position: fixed;
+  width: 600px;
+  height: 400px;
+  min-width: 600px;
+  min-height: 400px;
   top: 50%;
   left: 50%;
-  margin: -250px 0 0 -400px;
-
+  margin: -200px 0 0 -300px;
+  background-color: white;
   border: 1px solid black;
 }
 
 .closeBtn{
-  /* color: rgba(255,255,255,0.93);
-  font-size: 53px;
-  border: 1.2px solid rgba(255,255,255,0.9);
-  border-radius: 50px;
-  text-align: center;
-  padding: 24px 13px 0;
-  */
   position: fixed;
   top: 5rem;
-  right: 11rem;
+  right: 5rem;
   width: 60px;
   height: 60px;
   background: url('../images/close_white.png');
@@ -201,7 +179,8 @@ nav{
 
 nav .area-navi{
   position: absolute;
-  width: 200px;
+  /* width: 200px; */
+  width: 12.5rem;
 }
 
 nav .area-navi ul li:hover{
@@ -230,7 +209,6 @@ nav .btn-goTomain:hover{
 nav .fixed{
   position: fixed;
   top: 2rem;
-  /* right: 10rem; */
 }
 
 footer{
@@ -266,7 +244,7 @@ footer > p{
   font-family: 'Montserrat', sans-serif;
 }
 
-@media (max-width: 1679px){
+@media (max-width: 1599px){
   nav, .item p, .item ul li, header > p{
     font-size: 0.93em;
     line-height: 20px;
@@ -286,11 +264,11 @@ footer > p{
     padding-bottom: 10px;
   }
 
-  .item ul{
+  .contents .item ul{
     padding-top: 35px;
   }
 
-  .item .img{
+  .contents .item .img{
     width: 500px;
     height: 450px;
   }
@@ -300,20 +278,67 @@ footer > p{
     height: 18px;
   }
 
-  .item .line_item01{
+  .contents .item .line_item01{
     width: 248px;
   }
   
-  .item .line_item02{
+  .contents .item .line_item02{
     width: 227px;
   }
   
-  .item .line_item03{
+  .contents .item .line_item03{
     width: 250px;
   }
   
-  .item .line_item04{
+  .contents .item .line_item04{
     width: 226px;
   }
-  
+
+}
+
+
+@media (max-width: 1399px){
+  nav{
+    right: 9rem;
+  }
+
+  .contents{
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: 350px;
+  }
+  .contents .item .img{
+    width: 400px;
+    height: 350px;
+  }
+
+  .area-popup .closeBtn{
+    top: 4rem;
+    right: 4rem;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 1279px){
+  section{
+    width: 100%;
+    padding: 2rem ;
+  }
+  nav{
+    display: none;
+  }
+}
+
+
+@media (max-width: 940px){
+  header, section, footer{
+    min-width: 920px;
+  }
+
+  .area-popup .closeBtn{
+    top: 3rem;
+    right: 3rem;
+    width: 40px;
+    height: 40px;
+  }
 }
