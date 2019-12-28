@@ -1,3 +1,13 @@
+/* 
+
+
+	slider.js 
+	가져온 라이브러리 
+
+
+*/
+
+
 //current position
 var pos = 0;
 //number of slides

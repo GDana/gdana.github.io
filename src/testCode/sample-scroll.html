@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+$('#nav nav a').on('click', function(event) {
+    $(this).parent().find('a').removeClass('active');
+    $(this).addClass('active');
+});
+
+$(window).on('scroll', function() {
+    $('.target').each(function() {
+        if($(window).scrollTop() >= $(this).offset().top) {
+            var id = $(this).attr('id');
+            $('#nav nav a').removeClass('active');
+            $('#nav nav a[href=#'+ id +']').addClass('active');
+        }
+    });
+});
+</script>
+
+
+
+ <style>
+ * {
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    width: 100%;
+}
+
+#main div.target {
+    height: 1400px;
+	text-align:center;
+	font-family:맑은 고딕;
+	font-size:20pt;
+	padding-top:50%;
+}
+
+
+
+#nav {
+    width: 100%;
+    position: relative;
+}
+
+#nav nav {
+    position: fixed;
+    width: 100%;
+}
+
+#nav a {
+    border-bottom: 1px solid #666;
+    color: #333;
+	background:white;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+	display:inline-block;
+	float:left;
+	width:25%;
+}
+
+#nav a:hover, #nav a.active {
+    background: #2492fb;
+    color: #fff;
+}
+</style>
+
+ <body>
+<aside id="nav">
+    <nav>
+        <a href="#1" class="active">메뉴1</a>
+        <a href="#2">메뉴2</a>
+        <a href="#3">메뉴3</a>
+        <a href="#4">메뉴4</a>
+    </nav>
+</aside>
+
+ <section id="main">
+    <div class="target" id="1" style="background:red;">메뉴1 본문영역</div>
+    <div class="target" id="2" style="background:blue;">메뉴2 본문영역</div>
+    <div class="target" id="3" style="background:yellow;">메뉴3 본문영역</div>
+    <div class="target" id="4" style="background:green;">메뉴4 본문영역</div>
+</section>
+
+
+ </body>
+</html>

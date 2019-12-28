@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  // 레이어 팝업
+  // 레이어 팝업 오픈
   function openPopup(){
     var target = $(event.target);
     var targetClass = target[0].classList[target[0].classList.length-1]
@@ -20,6 +20,7 @@ $(document).ready(function(){
     }
   }
 
+  // 레이어 팝업 클로즈
   function closePopup(){
     var target = $(event.target);
 
@@ -31,6 +32,7 @@ $(document).ready(function(){
     }
   }
 
+  // 이벤트 발생
   $('.img').on('click', function(){
     if($(".area-popup").css("display") == "none"){
       $(".area-popup").show()

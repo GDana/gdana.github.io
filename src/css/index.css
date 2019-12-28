@@ -1,5 +1,4 @@
-/* Gothic A1 */
-@import url('https://fonts.googleapis.com/css?family=Gothic+A1&display=swap');
+
 /* Nanum Gothic Coding */
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400,700&display=swap&subset=korean');
 
@@ -20,6 +19,9 @@ a:visited{
   color: rgba(114,114,114,0.8);
 }
 
+/*****************************************************************************/
+
+
 .wrapper{
   width: 350px;
   height: 560px;
@@ -31,12 +33,10 @@ a:visited{
   transform: translate(-50%, -51%);
 }
 
-section{
-  display: grid;
-  justify-content: center;
-}
 
-section .logo{
+/* 헤더(header) */
+
+header .logo{
   width: 230px;
   height: 230px;
   background-image: url(../images/profile03.jpg);
@@ -47,32 +47,29 @@ section .logo{
   margin: 0 auto;
 }
 
-section p{
-  font-size: 15px;
-  text-align: center;
-  line-height: 20px;
-  /* letter-spacing: 0.02px; */
-  padding: 18px 0 26px 0;
-}
-
-section header{
-  padding-top: 29px;
-}
-
-section header > p{
-  font-size: 17px;
-  font-weight: bold;
-  padding: 52px 0 0 0;
-  font-style: italic;
-}
-
-section header > h1{
+header > h1{
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 37px;
   letter-spacing: -1px;
   text-align: center;
   color: #81665C;
+  padding-top: 29px;
+}
+
+
+/* 섹션(section) */
+
+section{
+  display: grid;
+  justify-content: center;
+}
+
+section p{
+  font-size: 15px;
+  text-align: center;
+  line-height: 20px;
+  padding: 18px 0 26px 0;
 }
 
 section button{
@@ -91,7 +88,6 @@ section button{
 
 section button:hover{
   border: none;
-  /* background-color: rgba(242,1 205, 135, 0.4); */
   background-color: #81665C;
 }
 
@@ -100,7 +96,6 @@ section button > a{
 }
 
 section button:hover a{
-  /* color: rgba(114,114,114,0.7); */
   color: white;
   font-weight: 600;
 }
@@ -124,11 +119,6 @@ section ul li{
 
 section ul li:hover{
   cursor: pointer;
-  /* font-weight: 500; */
-}
-
-section ul li a{
-  grid-row: 1/ 1;
 }
 
 section ul li::before{
@@ -142,17 +132,3 @@ section ul li:first-child::before{
   border: none;
   margin-left: -10px;
 }
-
-
-
-
-/* 
-
-.wrapper{
-  width: 350px;
-  height: 560px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -51%);
-} */
