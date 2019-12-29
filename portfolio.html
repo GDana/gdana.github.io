@@ -7,16 +7,11 @@
   <title>portfolio.html</title>
   <link rel="stylesheet" href="src/css/reset.css">
   <link rel="stylesheet" href="src/css/portfolio.css">
-  <link rel="stylesheet" href="src/css/slider.css">
+  <link rel="stylesheet" href="src/css/slidePopup.css">
   <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-  <style>
-    #wrapper{
-      margin: 0; 
-    }
-  </style>
 
 </head>
 <body>
@@ -128,14 +123,14 @@
         <p><i>Dev by &#10084; dana</i></p>
     </footer>
 
-    <!-- 레이어 팝업 -->
+    <!-- 슬라이드 & 레이어 팝업 -->
     <div class="area-popup">
       <div class="closeBtn"></div>
-      <div class="popup-item01 popup">
-        <!-- <h3>itme01</h3> -->
-        <div id="wrapper">
-          <div id="slider-wrap">
-            <ul id="slider">
+      <!-- 슬라이드01 -->
+      <div class="slide-item01">
+        <div class="area-slide">
+          <div class="inArea-slide">
+            <ul class="slider">
               <li data-color="#1abc9c">
                 <img src="src/images/cat(28).jpg">
               </li>
@@ -154,55 +149,33 @@
             </ul>
       
             <!--controls-->
-            <div class="btns" id="next"><i class="fa fa-arrow-right"></i></div>
-            <div class="btns" id="previous"><i class="fa fa-arrow-left"></i></div>
-            <div id="counter"></div>
-            <div id="pagination-wrap"><ul></ul></div>
+            <div class="btns next">
+              <i class="fa fa-arrow-right"></i>
+            </div>
+            <div class="btns previous">
+              <i class="fa fa-arrow-left"></i>
+            </div>
+            <div class="counter"></div>
+            <div class="pagination-wrap"><ul></ul></div>
             <!--controls-->
           </div>
         </div>
       </div>
-      <div class="popup-item02 popup">
-        <h3>itme02</h3>
-        <p>슬라이드 들어올 예정</p>
-        <!-- <div id="wrapper">
-          <div id="slider-wrap">
-            <ul id="slider">
-              <li data-color="#1abc9c">
-                <img src="src/images/cat(28).jpg">
-              </li>
-              <li data-color="#3498db">
-                <img src="src/images/cat(27).jpg">
-              </li>
-              <li data-color="#9b59b6">
-                <img src="src/images/cat(16).jpg">
-              </li>
-              <li data-color="#34495e">
-                <img src="src/images/cat(11).jpg">
-              </li>
-              <li data-color="#e74c3c">
-                <img src="src/images/cat(3).jpg">
-              </li>
-            </ul>
-      
-            <div class="btns" id="next"><i class="fa fa-arrow-right"></i></div>
-            <div class="btns" id="previous"><i class="fa fa-arrow-left"></i></div>
-            <div id="counter"></div>
-            <div id="pagination-wrap"><ul></ul></div>
-          </div> -->
+      <!-- 슬라이드02 -->
+      <div class="slide-item02">
+        <h1>slide02</h1>
       </div>
-      <div class="popup-item03 popup">
-        <h3>itme03</h3>
-        <p>슬라이드 들어올 예정</p>
+      <!-- 슬라이드03 -->
+      <div class="slide-item03">
+        <h1>slide03</h1>
       </div>
-      <div class="popup-item04 popup">
-        <h3>itme04</h3>
-        <p>슬라이드 들어올 예정</p>
+      <!-- 슬라이드04 -->
+      <div class="slide-item04">
+        <h1>slide04</h1>
       </div>
     </div>
   </div>
-  <script src="src/js/script.js"></script>
   <script src="src/js/scroll.js"></script>
-  <script src="src/js/slider.js"></script>
+  <script src="src/js/slidePopup.js"></script>
 </body>
 </html>

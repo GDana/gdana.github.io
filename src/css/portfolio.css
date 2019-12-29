@@ -229,7 +229,7 @@ footer > p{
 
 
 /* 레이어 팝업 */
-.area-popup{
+/* .area-popup{
   display: none;
   position: fixed;
   top: 0;
@@ -261,7 +261,7 @@ footer > p{
   background: url('../images/close_white.png');
   background-size: cover;
   cursor: pointer; 
-}
+} */
 
 
 /* 영문 폰트 전용 */

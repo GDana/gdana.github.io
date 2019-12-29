@@ -1,35 +1,73 @@
 /* 
 
 
-	slider.css 
-	가져온 라이브러리 
+	slidePopup.css 
+	가져온 라이브러리 + 소스 보강(레이어 팝업 기능구현)
 
 
 */
 
 
-/*GLOBALS*/
-*{margin:0; padding:0; list-style:none;}
-a{text-decoration:none;	color:#666;}
-/* a:hover{color:#1bc1a3;} */
+/*************** 레이어 팝업 ***************/
 
-#wrapper{
+.area-popup{
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.slide-item01, .slide-item02, .slide-item03, .slide-item04{
+  display: none;
+  position: fixed;
+  width: 600px;
+  height: 400px;
+  min-width: 600px;
+  min-height: 400px;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -300px;
+  background-color: white;
+  border: 6px solid rgba(0,0,0,0.5);
+}
+
+.closeBtn{
+  position: fixed;
+  top: 5rem;
+  right: 5rem;
+  width: 60px;
+  height: 60px;
+  background: url('../images/close_white.png');
+  background-size: cover;
+  cursor: pointer; 
+}
+
+
+/*************** 슬라이드 ***************/
+
+*{margin:0; padding:0; list-style:none;}
+a{text-decoration:none;	color:.666;}
+/* a:hover{color:.1bc1a3;} */
+
+.area-slide{
 	width:600px;
-	margin:50px auto;
+	margin:0;
 	height:400px;
 	position:relative;
 	color:#fff;
 	text-shadow:rgba(0,0,0,0.1) 2px 2px 0px;	
 }
 
-#slider-wrap{
+.inArea-slide{
 	width:600px;
 	height:400px;
 	position:relative;
 	overflow:hidden;
 }
 
-#slider-wrap ul#slider{
+.inArea-slide ul.slider{
 	width:100%;
 	height:100%;
 	
@@ -38,37 +76,35 @@ a{text-decoration:none;	color:#666;}
 	left:0;		
 }
 
-#slider-wrap ul#slider li{
+.inArea-slide ul.slider li{
 	float:left;
 	position:relative;
 	width:600px;
 	height:400px;	
 }
 
-#slider-wrap ul#slider li > div{
+.inArea-slide ul.slider li > div{
 	position:absolute;
 	top:20px;
 	left:35px;	
 }
 
-#slider-wrap ul#slider li > div h3{
+.inArea-slide ul.slider li > div h3{
 	font-size:36px;
 	text-transform:uppercase;	
 }
 
-#slider-wrap ul#slider li > div span{
+.inArea-slide ul.slider li > div span{
 	font-family: Neucha, Arial, sans serif;
 	font-size:21px;
 }
 
-#slider-wrap ul#slider li img{
+.inArea-slide ul.slider li img{
 	display:block;
 	width:100%;
   height: 100%;
 }
 
-
-/*btns*/
 .btns{
 	position:absolute;
 	width:50px;
@@ -98,20 +134,19 @@ a{text-decoration:none;	color:#666;}
 	background:rgba(0,0,0,0.3);	
 }
 
-#next{right:-50px; border-radius:7px 0px 0px 7px;}
-#previous{left:-50px; border-radius:0px 7px 7px 7px;}
-#counter{
+.next{right:-50px; border-radius:7px 0px 0px 7px;}
+.previous{left:-50px; border-radius:0px 7px 7px 7px;}
+.counter{
 	top: 30px; 
 	right:35px; 
 	width:auto;
 	position:absolute;
 }
 
-#slider-wrap.active #next{right:0px;}
-#slider-wrap.active #previous{left:0px;}
+.inArea-slide.active .next{right:0px;}
+.inArea-slide.active .previous{left:0px;}
 
-/*bar*/
-#pagination-wrap{
+.pagination-wrap{
 	min-width:20px;
 	margin-top:350px;
 	margin-left: auto; 
@@ -121,11 +156,11 @@ a{text-decoration:none;	color:#666;}
 	text-align:center;
 }
 
-#pagination-wrap ul {
+.pagination-wrap ul {
 	width:100%;
 }
 
-#pagination-wrap ul li{
+.pagination-wrap ul li{
 	margin: 0 4px;
 	display: inline-block;
 	width:5px;
@@ -137,7 +172,7 @@ a{text-decoration:none;	color:#666;}
   top:0;
 }
 
-#pagination-wrap ul li.active{
+.pagination-wrap ul li.active{
   width:12px;
   height:12px;
   top:3px;
@@ -145,8 +180,7 @@ a{text-decoration:none;	color:#666;}
 	box-shadow:rgba(0,0,0,0.1) 1px 1px 0px;	
 }
 
-/*ANIMATION*/
-#slider-wrap ul, #pagination-wrap ul li{
+.inArea-slide ul, .pagination-wrap ul li{
 	-webkit-transition: all 0.3s cubic-bezier(1,.01,.32,1);
 	-moz-transition: all 0.3s cubic-bezier(1,.01,.32,1);
 	-o-transition: all 0.3s cubic-bezier(1,.01,.32,1);
