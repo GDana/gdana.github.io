@@ -1,3 +1,13 @@
+/* 
+
+
+	scroll.js 
+	가져온 라이브러리 + 소스 보강('.fixed' 관련)
+
+
+*/
+
+
 (function(global, $){
     var $menu     = $('nav ul li.m')
     var $contents = $('.scroll')
